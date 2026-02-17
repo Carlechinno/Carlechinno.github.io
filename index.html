@@ -203,51 +203,113 @@
 
         <!-- ABOUT -->
         <section id="about" class="mx-auto max-w-6xl px-4 py-14">
-            <div class="grid gap-10 md:grid-cols-3">
-                <div>
+            <div class="grid gap-10 md:grid-cols-12 md:items-start">
+                <!-- Left header -->
+                <div class="md:col-span-4">
                     <h2 class="text-2xl font-bold tracking-tight">About</h2>
                     <p class="mt-2 text-sm text-slate-700 dark:text-slate-300">
-                        Short, direct, and tailored to the roles you want.
+                        A quick snapshot of who I am, what I build, and what I’m aiming for next.
                     </p>
+
+                    <!-- Quick facts card -->
+                    <div class="mt-6 rounded-3xl border border-slate-200 bg-white/70 p-5 shadow-sm dark:border-slate-800 dark:bg-slate-950/60">
+                        <p class="text-sm font-semibold">Quick facts</p>
+
+                        <dl class="mt-3 space-y-3 text-sm">
+                            <div class="flex items-start justify-between gap-4">
+                                <dt class="text-slate-600 dark:text-slate-400">Location</dt>
+                                <dd class="font-medium text-slate-900 dark:text-slate-100">Israel / Remote</dd>
+                            </div>
+                            <div class="flex items-start justify-between gap-4">
+                                <dt class="text-slate-600 dark:text-slate-400">Focus areas</dt>
+                                <dd class="text-right font-medium text-slate-900 dark:text-slate-100">
+                                    Unity VR • Game Dev • AI/ML
+                                </dd>
+                            </div>
+                            <div class="flex items-start justify-between gap-4">
+                                <dt class="text-slate-600 dark:text-slate-400">Strengths</dt>
+                                <dd class="text-right font-medium text-slate-900 dark:text-slate-100">
+                                    Clean code • Debugging • Collaboration
+                                </dd>
+                            </div>
+                        </dl>
+
+                        <div class="mt-4 flex flex-wrap gap-2 text-xs text-slate-600 dark:text-slate-400">
+                            <span class="rounded-full bg-slate-100 px-3 py-1 dark:bg-slate-900">Problem-solving</span>
+                            <span class="rounded-full bg-slate-100 px-3 py-1 dark:bg-slate-900">Systems mindset</span>
+                            <span class="rounded-full bg-slate-100 px-3 py-1 dark:bg-slate-900">Shippable projects</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="md:col-span-2">
-                    <div class="rounded-3xl border border-slate-200 bg-white/70 p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950/60">
-                        <p class="leading-relaxed text-slate-800 dark:text-slate-200">
-                            I’m Carmel Dor — a software engineer with a bachelor’s degree, interested in game development and AI.
-                            I enjoy building reliable systems, writing clean code, and shipping features that feel great to use.
+                <!-- Right content -->
+                <div class="md:col-span-8">
+                    <div class="rounded-3xl border border-slate-200 bg-white/70 p-7 shadow-sm dark:border-slate-800 dark:bg-slate-950/60">
+                        <!-- Intro -->
+                        <p class="text-base leading-relaxed text-slate-800 dark:text-slate-200">
+                            I’m <span class="font-semibold">Carmel Dor</span> — a software engineer with a bachelor’s degree.
+                            I build interactive, polished experiences (especially in <span class="font-semibold">Unity VR</span>)
+                            and practical <span class="font-semibold">machine learning</span> projects with strong fundamentals.
                         </p>
 
+                        <p class="mt-4 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
+                            I care about maintainable architecture, clear documentation, and an end-to-end mindset:
+                            plan → build → test → polish → ship.
+                        </p>
+
+                        <!-- Two columns: What I do / What I’m looking for -->
                         <div class="mt-6 grid gap-4 sm:grid-cols-2">
-                            <div class="rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-950">
-                                <p class="text-sm font-semibold">What I’m good at</p>
-                                <ul class="mt-2 list-disc pl-5 text-sm text-slate-700 dark:text-slate-300">
-                                    <li>Designing maintainable systems</li>
-                                    <li>Debugging & performance tuning</li>
-                                    <li>Writing clear documentation</li>
+                            <div class="rounded-2xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-950">
+                                <p class="text-sm font-semibold">What I do</p>
+                                <ul class="mt-3 space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                                    <li class="flex gap-2">
+                                        <span class="mt-0.5 font-mono text-slate-500 dark:text-slate-400">•</span>
+                                        Build gameplay systems and VR interactions in Unity (C#)
+                                    </li>
+                                    <li class="flex gap-2">
+                                        <span class="mt-0.5 font-mono text-slate-500 dark:text-slate-400">•</span>
+                                        Develop ML pipelines: preprocessing, feature engineering, evaluation (F1/Recall)
+                                    </li>
+                                    <li class="flex gap-2">
+                                        <span class="mt-0.5 font-mono text-slate-500 dark:text-slate-400">•</span>
+                                        Work with strong CS fundamentals: algorithms, data structures, debugging
+                                    </li>
                                 </ul>
                             </div>
-                            <div class="rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-950">
+
+                            <div class="rounded-2xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-950">
                                 <p class="text-sm font-semibold">What I’m looking for</p>
-                                <ul class="mt-2 list-disc pl-5 text-sm text-slate-700 dark:text-slate-300">
-                                    <li>Software engineering roles</li>
-                                    <li>Game/VR or full-stack work</li>
-                                    <li>Strong mentorship & growth</li>
+                                <ul class="mt-3 space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                                    <li class="flex gap-2">
+                                        <span class="mt-0.5 font-mono text-slate-500 dark:text-slate-400">•</span>
+                                        Software engineering roles (junior / entry-level)
+                                    </li>
+                                    <li class="flex gap-2">
+                                        <span class="mt-0.5 font-mono text-slate-500 dark:text-slate-400">•</span>
+                                        VR / game development opportunities, or ML-focused roles
+                                    </li>
+                                    <li class="flex gap-2">
+                                        <span class="mt-0.5 font-mono text-slate-500 dark:text-slate-400">•</span>
+                                        Teams that value mentorship, feedback, and growth
+                                    </li>
                                 </ul>
                             </div>
                         </div>
 
-                        <div class="mt-6 flex flex-wrap gap-3">
+                        <!-- CTAs -->
+                        <div class="mt-7 flex flex-wrap items-center gap-3">
                             <a class="rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white hover:opacity-90 focus-visible:ring-2 focus-visible:ring-slate-400 dark:bg-white dark:text-slate-950 dark:focus-visible:ring-slate-500"
                                href="assets/Carmel-Dor-CV.pdf">
                                 Download CV
                             </a>
+
                             <a class="rounded-xl border border-slate-200 px-5 py-3 text-sm font-semibold hover:bg-slate-50 focus-visible:ring-2 focus-visible:ring-slate-400 dark:border-slate-800 dark:hover:bg-slate-900 dark:focus-visible:ring-slate-500"
                                href="#contact">
                                 Let’s talk
                             </a>
-                            <p class="flex items-center text-xs text-slate-600 dark:text-slate-400">
-                                Tip: put your CV at <span class="mx-1 font-mono">/assets/Carmel-Dor-CV.pdf</span>
+
+                            <p class="text-xs text-slate-600 dark:text-slate-400">
+                                Tip: put your CV at <span class="font-mono">/assets/Carmel-Dor-CV.pdf</span>
                             </p>
                         </div>
                     </div>
