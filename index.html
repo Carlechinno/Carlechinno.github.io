@@ -307,19 +307,154 @@
             </div>
 
             <div id="projectsGrid" class="mt-8 grid gap-4 md:grid-cols-2">
-                <article class="project-card rounded-3xl border border-slate-200 bg-white/70 p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950/60"
-                         data-tags="placeholder">
-                    <h3 class="text-lg font-semibold">Project #1 (placeholder)</h3>
-                    <p class="mt-1 text-sm text-slate-700 dark:text-slate-300">We’ll replace this with your real project.</p>
+                <!-- FEATURED: Deep Calm VR (PRIVATE) -->
+                <article class="project-card rounded-3xl border border-slate-200 bg-white/70 p-7 shadow-sm dark:border-slate-800 dark:bg-slate-950/60 md:col-span-2"
+                         data-tags="featured unity vr csharp xr quest private">
+                    <div class="flex flex-col justify-between gap-4 md:flex-row md:items-start">
+                        <div>
+                            <div class="mb-2 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-semibold dark:border-slate-800 dark:bg-slate-950">
+                                <span class="h-2 w-2 rounded-full bg-indigo-500"></span>
+                                Featured • Private Repo
+                            </div>
+
+                            <h3 class="text-xl font-semibold">Deep Calm VR</h3>
+                            <p class="mt-1 text-sm text-slate-700 dark:text-slate-300">
+                                VR experience focused on calming exposure-style progression and interactive underwater exploration.
+                            </p>
+
+                            <ul class="mt-4 list-disc space-y-1 pl-5 text-sm text-slate-700 dark:text-slate-300">
+                                <li>Stage-based progression + interactive objectives (scan/photo, unique targets, transitions)</li>
+                                <li>Comfort-first VR tuning and performance optimization for standalone headsets</li>
+                            </ul>
+
+                            <div class="mt-4 flex flex-wrap gap-2 text-xs">
+                                <span class="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800">Unity</span>
+                                <span class="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800">C#</span>
+                                <span class="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800">XR</span>
+                                <span class="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800">Meta Quest</span>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap gap-3">
+                            <button type="button"
+                                    disabled
+                                    class="cursor-not-allowed rounded-xl bg-slate-900/40 px-4 py-2 text-sm font-semibold text-white dark:bg-white/30 dark:text-slate-950"
+                                    title="Repo is private">
+                                Repo (Private)
+                            </button>
+                            <button type="button"
+                                    disabled
+                                    class="cursor-not-allowed rounded-xl border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-500 dark:border-slate-800 dark:text-slate-400"
+                                    title="Video will be added later">
+                                Video (Coming soon)
+                            </button>
+                        </div>
+                    </div>
                 </article>
 
+                <!-- FEATURED: Medical Readmission Risk Prediction (PRIVATE) -->
+                <article class="project-card rounded-3xl border border-slate-200 bg-white/70 p-7 shadow-sm dark:border-slate-800 dark:bg-slate-950/60 md:col-span-2"
+                         data-tags="featured machine-learning python classification healthcare private">
+                    <div class="flex flex-col justify-between gap-4 md:flex-row md:items-start">
+                        <div>
+                            <div class="mb-2 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-semibold dark:border-slate-800 dark:bg-slate-950">
+                                <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
+                                Featured • Private Repo
+                            </div>
+
+                            <h3 class="text-xl font-semibold">Medical Readmission Risk Prediction (ML)</h3>
+                            <p class="mt-1 text-sm text-slate-700 dark:text-slate-300">
+                                ML pipeline predicting whether a patient will be readmitted within 30 days using tabular clinical data.
+                            </p>
+
+                            <ul class="mt-4 list-disc space-y-1 pl-5 text-sm text-slate-700 dark:text-slate-300">
+                                <li>End-to-end preprocessing + feature engineering + model training pipeline</li>
+                                <li>Evaluation with confusion matrix and Precision/Recall/F1 (beyond accuracy)</li>
+                            </ul>
+
+                            <div class="mt-4 flex flex-wrap gap-2 text-xs">
+                                <span class="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800">Python</span>
+                                <span class="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800">scikit-learn</span>
+                                <span class="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800">Pandas</span>
+                                <span class="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800">Classification</span>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap gap-3">
+                            <button type="button"
+                                    disabled
+                                    class="cursor-not-allowed rounded-xl bg-slate-900/40 px-4 py-2 text-sm font-semibold text-white dark:bg-white/30 dark:text-slate-950"
+                                    title="Repo is private">
+                                Repo (Private)
+                            </button>
+                            <button type="button"
+                                    disabled
+                                    class="cursor-not-allowed rounded-xl border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-500 dark:border-slate-800 dark:text-slate-400"
+                                    title="Notebook/report link will be added later">
+                                Results (Coming soon)
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Pacman -->
                 <article class="project-card rounded-3xl border border-slate-200 bg-white/70 p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950/60"
-                         data-tags="placeholder">
-                    <h3 class="text-lg font-semibold">Project #2 (placeholder)</h3>
-                    <p class="mt-1 text-sm text-slate-700 dark:text-slate-300">We’ll replace this with your real project.</p>
+                         data-tags="java oop game pacman">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <h3 class="text-lg font-semibold">Pacman (Java)</h3>
+                            <p class="mt-1 text-sm text-slate-700 dark:text-slate-300">
+                                Pacman game built for an advanced object-oriented programming course.
+                            </p>
+                        </div>
+                        <span class="rounded-xl border border-slate-200 px-3 py-1 text-xs dark:border-slate-800">Java</span>
+                    </div>
+
+                    <div class="mt-4 flex flex-wrap gap-2 text-xs">
+                        <span class="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800">OOP</span>
+                        <span class="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800">Game</span>
+                        <span class="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800">Course Project</span>
+                    </div>
+
+                    <div class="mt-6 flex flex-wrap gap-3">
+                        <a href="https://github.com/Carlechinno/Pacman-Java"
+                           target="_blank"
+                           rel="noreferrer"
+                           class="rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:opacity-90 dark:bg-white dark:text-slate-950">
+                            Repo
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Snake AI -->
+                <article class="project-card rounded-3xl border border-slate-200 bg-white/70 p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950/60"
+                         data-tags="java ai genetic-algorithm q-learning snake">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <h3 class="text-lg font-semibold">Snake AI (Genetic + Q-Learning)</h3>
+                            <p class="mt-1 text-sm text-slate-700 dark:text-slate-300">
+                                Snake AI experiments combining genetic algorithms and Q-learning (Java).
+                            </p>
+                        </div>
+                        <span class="rounded-xl border border-slate-200 px-3 py-1 text-xs dark:border-slate-800">Java</span>
+                    </div>
+
+                    <div class="mt-4 flex flex-wrap gap-2 text-xs">
+                        <span class="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800">AI</span>
+                        <span class="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800">Genetic Algorithm</span>
+                        <span class="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800">Q-Learning</span>
+                    </div>
+
+                    <div class="mt-6 flex flex-wrap gap-3">
+                        <a href="https://github.com/Carlechinno/Snake-AI-genetic-and-Q-learning"
+                           target="_blank"
+                           rel="noreferrer"
+                           class="rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:opacity-90 dark:bg-white dark:text-slate-950">
+                            Repo
+                        </a>
+                    </div>
                 </article>
             </div>
-        </section>
 
         <!-- EXPERIENCE -->
         <section id="experience" class="mx-auto max-w-6xl px-4 py-14">
