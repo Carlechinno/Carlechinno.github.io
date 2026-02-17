@@ -1,0 +1,661 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Name — Software Engineer</title>
+    <meta
+      name="description"
+      content="Portfolio of Your Name — Software Engineer. Projects, skills, experience, and contact."
+    />
+
+    <!-- Tailwind CDN (works great for a GitHub Pages monolith) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Optional: configure Tailwind (CDN supports tailwind.config in-page) -->
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["ui-sans-serif", "system-ui", "Segoe UI", "Roboto", "Arial"],
+              mono: ["ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "monospace"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      /* Tiny enhancement: nicer selection + focus outline */
+      ::selection { opacity: 1; }
+      :focus-visible { outline: none; }
+    </style>
+  </head>
+
+  <body class="bg-white text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100">
+    <!-- Top gradient background accent -->
+    <div class="pointer-events-none fixed inset-0 -z-10">
+      <div
+        class="absolute left-1/2 top-[-10rem] h-[28rem] w-[28rem] -translate-x-1/2 rounded-full blur-3xl opacity-30 dark:opacity-25
+               bg-gradient-to-tr from-indigo-300 via-sky-300 to-emerald-300"
+      ></div>
+    </div>
+
+    <!-- NAV -->
+    <header class="sticky top-0 z-30 border-b border-slate-200/70 bg-white/80 backdrop-blur dark:border-slate-800/70 dark:bg-slate-950/70">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+        <a href="#top" class="flex items-center gap-2 font-semibold tracking-tight">
+          <span class="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-950">Y</span>
+          <span>Your Name</span>
+        </a>
+
+        <nav class="hidden items-center gap-6 text-sm md:flex">
+          <a class="hover:text-slate-600 dark:hover:text-slate-300" href="#about">About</a>
+          <a class="hover:text-slate-600 dark:hover:text-slate-300" href="#skills">Skills</a>
+          <a class="hover:text-slate-600 dark:hover:text-slate-300" href="#projects">Projects</a>
+          <a class="hover:text-slate-600 dark:hover:text-slate-300" href="#experience">Experience</a>
+          <a class="hover:text-slate-600 dark:hover:text-slate-300" href="#education">Education</a>
+          <a class="hover:text-slate-600 dark:hover:text-slate-300" href="#contact">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-2">
+          <button
+            id="themeToggle"
+            type="button"
+            class="inline-flex items-center justify-center rounded-xl border border-slate-200 px-3 py-2 text-sm hover:bg-slate-50 dark:border-slate-800 dark:hover:bg-slate-900"
+            aria-label="Toggle dark mode"
+          >
+            <span id="themeIcon" class="font-mono">☾</span>
+          </button>
+
+          <a
+            href="#contact"
+            class="hidden rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:opacity-90 dark:bg-white dark:text-slate-950 md:inline-flex"
+          >
+            Hire me
+          </a>
+
+          <!-- Mobile menu button -->
+          <button
+            id="mobileMenuBtn"
+            class="inline-flex items-center justify-center rounded-xl border border-slate-200 px-3 py-2 text-sm hover:bg-slate-50 dark:border-slate-800 dark:hover:bg-slate-900 md:hidden"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+          >
+            Menu
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobileMenu" class="hidden border-t border-slate-200/70 dark:border-slate-800/70 md:hidden">
+        <div class="mx-auto max-w-6xl px-4 py-3">
+          <div class="grid gap-2 text-sm">
+            <a class="rounded-lg px-3 py-2 hover:bg-slate-50 dark:hover:bg-slate-900" href="#about">About</a>
+            <a class="rounded-lg px-3 py-2 hover:bg-slate-50 dark:hover:bg-slate-900" href="#skills">Skills</a>
+            <a class="rounded-lg px-3 py-2 hover:bg-slate-50 dark:hover:bg-slate-900" href="#projects">Projects</a>
+            <a class="rounded-lg px-3 py-2 hover:bg-slate-50 dark:hover:bg-slate-900" href="#experience">Experience</a>
+            <a class="rounded-lg px-3 py-2 hover:bg-slate-50 dark:hover:bg-slate-900" href="#education">Education</a>
+            <a class="rounded-lg px-3 py-2 hover:bg-slate-50 dark:hover:bg-slate-900" href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- HERO -->
+      <section class="mx-auto max-w-6xl px-4 py-16 md:py-20">
+        <div class="grid items-center gap-10 md:grid-cols-2">
+          <div>
+            <p class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 px-3 py-1 text-xs font-medium text-slate-700 dark:border-slate-800 dark:bg-slate-950/60 dark:text-slate-300">
+              <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
+              Open to opportunities
+            </p>
+
+            <h1 class="mt-4 text-4xl font-bold tracking-tight md:text-5xl">
+              Software Engineer
+              <span class="block text-slate-500 dark:text-slate-400">building clean, reliable products.</span>
+            </h1>
+
+            <p class="mt-4 max-w-prose text-base leading-relaxed text-slate-700 dark:text-slate-300">
+              I’m <span class="font-semibold text-slate-900 dark:text-white">Your Name</span>, a software engineer with a
+              bachelor’s degree. I build web apps, tooling, and backend systems with a focus on performance,
+              maintainability, and user experience.
+            </p>
+
+            <div class="mt-6 flex flex-wrap items-center gap-3">
+              <a
+                href="#projects"
+                class="rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white hover:opacity-90 dark:bg-white dark:text-slate-950"
+              >
+                View projects
+              </a>
+              <a
+                href="#contact"
+                class="rounded-xl border border-slate-200 px-5 py-3 text-sm font-semibold hover:bg-slate-50 dark:border-slate-800 dark:hover:bg-slate-900"
+              >
+                Contact
+              </a>
+              <a
+                href="https://github.com/your-username"
+                target="_blank"
+                rel="noreferrer"
+                class="rounded-xl border border-slate-200 px-5 py-3 text-sm font-semibold hover:bg-slate-50 dark:border-slate-800 dark:hover:bg-slate-900"
+              >
+                GitHub
+              </a>
+              <a
+                href="https://www.linkedin.com/in/your-handle/"
+                target="_blank"
+                rel="noreferrer"
+                class="rounded-xl border border-slate-200 px-5 py-3 text-sm font-semibold hover:bg-slate-50 dark:border-slate-800 dark:hover:bg-slate-900"
+              >
+                LinkedIn
+              </a>
+            </div>
+
+            <div class="mt-8 flex flex-wrap gap-2 text-xs text-slate-600 dark:text-slate-400">
+              <span class="rounded-full bg-slate-100 px-3 py-1 dark:bg-slate-900">📍 Israel / Remote</span>
+              <span class="rounded-full bg-slate-100 px-3 py-1 dark:bg-slate-900">⚡ Full-stack</span>
+              <span class="rounded-full bg-slate-100 px-3 py-1 dark:bg-slate-900">🧠 AI/ML-curious</span>
+            </div>
+          </div>
+
+          <!-- Hero card -->
+          <div class="rounded-3xl border border-slate-200 bg-white/70 p-6 shadow-sm backdrop-blur dark:border-slate-800 dark:bg-slate-950/60">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <h2 class="text-lg font-semibold">Quick highlights</h2>
+                <p class="mt-1 text-sm text-slate-700 dark:text-slate-300">
+                  A snapshot of what I like to build.
+                </p>
+              </div>
+              <div class="rounded-2xl border border-slate-200 px-3 py-1 text-xs dark:border-slate-800">
+                2026
+              </div>
+            </div>
+
+            <div class="mt-6 grid gap-4">
+              <div class="rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-950">
+                <p class="text-sm font-semibold">🧩 Systems & backend</p>
+                <p class="mt-1 text-sm text-slate-700 dark:text-slate-300">
+                  APIs, databases, auth, clean architecture.
+                </p>
+              </div>
+
+              <div class="rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-950">
+                <p class="text-sm font-semibold">🎮 Interactive & real-time</p>
+                <p class="mt-1 text-sm text-slate-700 dark:text-slate-300">
+                  Game/VR experiences, performance tuning.
+                </p>
+              </div>
+
+              <div class="rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-950">
+                <p class="text-sm font-semibold">📊 Data & ML</p>
+                <p class="mt-1 text-sm text-slate-700 dark:text-slate-300">
+                  Practical pipelines, evaluation, explainability.
+                </p>
+              </div>
+            </div>
+
+            <div class="mt-6 flex flex-wrap gap-2 text-xs">
+              <span class="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800">Java</span>
+              <span class="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800">Python</span>
+              <span class="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800">C#</span>
+              <span class="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800">SQL</span>
+              <span class="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800">Unity</span>
+              <span class="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800">React</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="mx-auto max-w-6xl px-4 py-14">
+        <div class="grid gap-10 md:grid-cols-3">
+          <div>
+            <h2 class="text-2xl font-bold tracking-tight">About</h2>
+            <p class="mt-2 text-sm text-slate-700 dark:text-slate-300">
+              A short bio you can tweak in 2 minutes.
+            </p>
+          </div>
+
+          <div class="md:col-span-2">
+            <div class="rounded-3xl border border-slate-200 bg-white/70 p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950/60">
+              <p class="text-slate-800 dark:text-slate-200 leading-relaxed">
+                I’m a software engineer with a bachelor’s degree, focused on building practical, polished software.
+                I care about clean code, great UX, and shipping. I’m comfortable working across the stack and
+                collaborating with teams using Git, code reviews, and clear documentation.
+              </p>
+
+              <div class="mt-6 grid gap-4 sm:grid-cols-2">
+                <div class="rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-950">
+                  <p class="text-sm font-semibold">What I’m good at</p>
+                  <ul class="mt-2 list-disc pl-5 text-sm text-slate-700 dark:text-slate-300">
+                    <li>Designing maintainable systems</li>
+                    <li>Debugging & performance tuning</li>
+                    <li>Writing clear documentation</li>
+                  </ul>
+                </div>
+                <div class="rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-950">
+                  <p class="text-sm font-semibold">What I’m looking for</p>
+                  <ul class="mt-2 list-disc pl-5 text-sm text-slate-700 dark:text-slate-300">
+                    <li>Software engineering roles</li>
+                    <li>Game/VR or full-stack work</li>
+                    <li>Strong mentorship & growth</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="mt-6 flex flex-wrap gap-3">
+                <a
+                  class="rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white hover:opacity-90 dark:bg-white dark:text-slate-950"
+                  href="assets/YourName-CV.pdf"
+                >
+                  Download CV
+                </a>
+                <a
+                  class="rounded-xl border border-slate-200 px-5 py-3 text-sm font-semibold hover:bg-slate-50 dark:border-slate-800 dark:hover:bg-slate-900"
+                  href="#contact"
+                >
+                  Let’s talk
+                </a>
+                <p class="flex items-center text-xs text-slate-600 dark:text-slate-400">
+                  Tip: put your CV at <span class="mx-1 font-mono">/assets/YourName-CV.pdf</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="mx-auto max-w-6xl px-4 py-14">
+        <div class="flex items-end justify-between gap-6">
+          <div>
+            <h2 class="text-2xl font-bold tracking-tight">Skills</h2>
+            <p class="mt-2 text-sm text-slate-700 dark:text-slate-300">
+              Keep it honest: strong, familiar, learning.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-8 grid gap-4 md:grid-cols-3">
+          <div class="rounded-3xl border border-slate-200 bg-white/70 p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950/60">
+            <h3 class="text-sm font-semibold">Languages</h3>
+            <div class="mt-3 flex flex-wrap gap-2 text-xs">
+              <span class="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800">Java</span>
+              <span class="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800">Python</span>
+              <span class="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800">C#</span>
+              <span class="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800">C/C++</span>
+              <span class="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800">SQL</span>
+              <span class="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800">JavaScript/TS</span>
+            </div>
+          </div>
+
+          <div class="rounded-3xl border border-slate-200 bg-white/70 p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950/60">
+            <h3 class="text-sm font-semibold">Frameworks & Tools</h3>
+            <div class="mt-3 flex flex-wrap gap-2 text-xs">
+              <span class="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800">React</span>
+              <span class="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800">Node</span>
+              <span class="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800">Spring</span>
+              <span class="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800">.NET</span>
+              <span class="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800">Unity</span>
+              <span class="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800">Git</span>
+              <span class="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800">Docker</span>
+            </div>
+          </div>
+
+          <div class="rounded-3xl border border-slate-200 bg-white/70 p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950/60">
+            <h3 class="text-sm font-semibold">What I care about</h3>
+            <ul class="mt-3 space-y-2 text-sm text-slate-700 dark:text-slate-300">
+              <li class="flex gap-2"><span class="font-mono">✓</span> Clean architecture & readable code</li>
+              <li class="flex gap-2"><span class="font-mono">✓</span> Testing, CI, reliability</li>
+              <li class="flex gap-2"><span class="font-mono">✓</span> Performance and UX details</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="mx-auto max-w-6xl px-4 py-14">
+        <div class="flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
+          <div>
+            <h2 class="text-2xl font-bold tracking-tight">Projects</h2>
+            <p class="mt-2 text-sm text-slate-700 dark:text-slate-300">
+              3–6 strong projects beats 12 weak ones.
+            </p>
+          </div>
+
+          <div class="flex w-full flex-col gap-2 sm:flex-row md:w-auto">
+            <input
+              id="projectFilter"
+              type="text"
+              placeholder="Filter projects…"
+              class="w-full rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm shadow-sm placeholder:text-slate-400 focus:border-slate-400 dark:border-slate-800 dark:bg-slate-950 dark:focus:border-slate-500"
+            />
+            <a
+              href="https://github.com/your-username?tab=repositories"
+              target="_blank"
+              rel="noreferrer"
+              class="inline-flex items-center justify-center rounded-xl border border-slate-200 px-4 py-2 text-sm font-semibold hover:bg-slate-50 dark:border-slate-800 dark:hover:bg-slate-900"
+            >
+              All repos
+            </a>
+          </div>
+        </div>
+
+        <div id="projectsGrid" class="mt-8 grid gap-4 md:grid-cols-2">
+          <!-- Project card template (copy/paste) -->
+          <article
+            class="project-card rounded-3xl border border-slate-200 bg-white/70 p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950/60"
+            data-tags="fullstack api auth database"
+          >
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <h3 class="text-lg font-semibold">Project Name</h3>
+                <p class="mt-1 text-sm text-slate-700 dark:text-slate-300">
+                  One sentence: what it does + why it matters.
+                </p>
+              </div>
+              <span class="rounded-full border border-slate-200 px-3 py-1 text-xs dark:border-slate-800">2026</span>
+            </div>
+
+            <ul class="mt-4 list-disc space-y-1 pl-5 text-sm text-slate-700 dark:text-slate-300">
+              <li>Impact bullet #1 (speed, scale, UX, reliability)</li>
+              <li>Impact bullet #2 (tech/design challenge you solved)</li>
+            </ul>
+
+            <div class="mt-4 flex flex-wrap gap-2 text-xs">
+              <span class="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800">React</span>
+              <span class="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800">Node</span>
+              <span class="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800">PostgreSQL</span>
+            </div>
+
+            <div class="mt-6 flex flex-wrap gap-3">
+              <a
+                href="#"
+                class="rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:opacity-90 dark:bg-white dark:text-slate-950"
+              >
+                Live
+              </a>
+              <a
+                href="#"
+                class="rounded-xl border border-slate-200 px-4 py-2 text-sm font-semibold hover:bg-slate-50 dark:border-slate-800 dark:hover:bg-slate-900"
+              >
+                Code
+              </a>
+            </div>
+          </article>
+
+          <article
+            class="project-card rounded-3xl border border-slate-200 bg-white/70 p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950/60"
+            data-tags="unity vr game csharp"
+          >
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <h3 class="text-lg font-semibold">VR / Unity Project</h3>
+                <p class="mt-1 text-sm text-slate-700 dark:text-slate-300">
+                  Interactive experience with performance constraints and real-time logic.
+                </p>
+              </div>
+              <span class="rounded-full border border-slate-200 px-3 py-1 text-xs dark:border-slate-800">2026</span>
+            </div>
+
+            <ul class="mt-4 list-disc space-y-1 pl-5 text-sm text-slate-700 dark:text-slate-300">
+              <li>Designed modular game systems (managers, states, events)</li>
+              <li>Optimized for standalone VR performance</li>
+            </ul>
+
+            <div class="mt-4 flex flex-wrap gap-2 text-xs">
+              <span class="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800">Unity</span>
+              <span class="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800">C#</span>
+              <span class="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800">XR</span>
+            </div>
+
+            <div class="mt-6 flex flex-wrap gap-3">
+              <a
+                href="#"
+                class="rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:opacity-90 dark:bg-white dark:text-slate-950"
+              >
+                Demo
+              </a>
+              <a
+                href="#"
+                class="rounded-xl border border-slate-200 px-4 py-2 text-sm font-semibold hover:bg-slate-50 dark:border-slate-800 dark:hover:bg-slate-900"
+              >
+                Write-up
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section id="experience" class="mx-auto max-w-6xl px-4 py-14">
+        <div>
+          <h2 class="text-2xl font-bold tracking-tight">Experience</h2>
+          <p class="mt-2 text-sm text-slate-700 dark:text-slate-300">
+            Use real outcomes: latency, users, accuracy, cost, etc.
+          </p>
+        </div>
+
+        <div class="mt-8 grid gap-4">
+          <div class="rounded-3xl border border-slate-200 bg-white/70 p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950/60">
+            <div class="flex flex-col justify-between gap-2 md:flex-row md:items-center">
+              <div>
+                <h3 class="text-lg font-semibold">Software Engineer — Company</h3>
+                <p class="text-sm text-slate-700 dark:text-slate-300">Team / Product area</p>
+              </div>
+              <p class="text-sm text-slate-600 dark:text-slate-400">Jan 2025 — Present</p>
+            </div>
+            <ul class="mt-4 list-disc space-y-1 pl-5 text-sm text-slate-700 dark:text-slate-300">
+              <li>Built/owned feature X resulting in Y improvement</li>
+              <li>Reduced API response time from A to B</li>
+              <li>Collaborated with designers/PM to ship Z</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- EDUCATION -->
+      <section id="education" class="mx-auto max-w-6xl px-4 py-14">
+        <div>
+          <h2 class="text-2xl font-bold tracking-tight">Education</h2>
+        </div>
+
+        <div class="mt-8 grid gap-4 md:grid-cols-2">
+          <div class="rounded-3xl border border-slate-200 bg-white/70 p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950/60">
+            <h3 class="text-lg font-semibold">B.Sc. in Software Engineering</h3>
+            <p class="mt-1 text-sm text-slate-700 dark:text-slate-300">University / College Name</p>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">
+              Optional: relevant coursework, awards, thesis/capstone.
+            </p>
+          </div>
+
+          <div class="rounded-3xl border border-slate-200 bg-white/70 p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950/60">
+            <h3 class="text-lg font-semibold">Certificates / Extras</h3>
+            <ul class="mt-3 list-disc space-y-1 pl-5 text-sm text-slate-700 dark:text-slate-300">
+              <li>Hackathons, online courses, leadership</li>
+              <li>Open-source contributions</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="mx-auto max-w-6xl px-4 py-16">
+        <div class="rounded-3xl border border-slate-200 bg-white/70 p-8 shadow-sm dark:border-slate-800 dark:bg-slate-950/60">
+          <div class="grid gap-10 md:grid-cols-2 md:items-center">
+            <div>
+              <h2 class="text-2xl font-bold tracking-tight">Let’s build something</h2>
+              <p class="mt-2 text-sm text-slate-700 dark:text-slate-300">
+                Email is best. I usually reply within 1–2 days.
+              </p>
+
+              <div class="mt-6 space-y-3 text-sm">
+                <p>
+                  <span class="font-semibold">Email:</span>
+                  <a class="underline hover:opacity-80" href="mailto:you@email.com">you@email.com</a>
+                </p>
+                <p>
+                  <span class="font-semibold">GitHub:</span>
+                  <a class="underline hover:opacity-80" href="https://github.com/your-username" target="_blank" rel="noreferrer">
+                    github.com/your-username
+                  </a>
+                </p>
+                <p>
+                  <span class="font-semibold">LinkedIn:</span>
+                  <a class="underline hover:opacity-80" href="https://www.linkedin.com/in/your-handle/" target="_blank" rel="noreferrer">
+                    linkedin.com/in/your-handle
+                  </a>
+                </p>
+              </div>
+            </div>
+
+            <form
+              class="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-950"
+              onsubmit="return handleContactSubmit(event)"
+            >
+              <div class="grid gap-4">
+                <label class="grid gap-2">
+                  <span class="text-sm font-semibold">Name</span>
+                  <input
+                    name="name"
+                    required
+                    class="rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm shadow-sm focus:border-slate-400 dark:border-slate-800 dark:bg-slate-950 dark:focus:border-slate-500"
+                    placeholder="Your name"
+                  />
+                </label>
+
+                <label class="grid gap-2">
+                  <span class="text-sm font-semibold">Email</span>
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    class="rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm shadow-sm focus:border-slate-400 dark:border-slate-800 dark:bg-slate-950 dark:focus:border-slate-500"
+                    placeholder="you@email.com"
+                  />
+                </label>
+
+                <label class="grid gap-2">
+                  <span class="text-sm font-semibold">Message</span>
+                  <textarea
+                    name="message"
+                    required
+                    rows="4"
+                    class="rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm shadow-sm focus:border-slate-400 dark:border-slate-800 dark:bg-slate-950 dark:focus:border-slate-500"
+                    placeholder="What would you like to talk about?"
+                  ></textarea>
+                </label>
+
+                <button
+                  type="submit"
+                  class="rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white hover:opacity-90 dark:bg-white dark:text-slate-950"
+                >
+                  Send
+                </button>
+
+                <p id="formHint" class="text-xs text-slate-600 dark:text-slate-400">
+                  This form opens your email client (no backend needed).
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="mx-auto max-w-6xl px-4 pb-10">
+        <div class="flex flex-col items-start justify-between gap-3 border-t border-slate-200 pt-6 text-sm text-slate-600 dark:border-slate-800 dark:text-slate-400 md:flex-row md:items-center">
+          <p>© <span id="year"></span> Your Name. Built with Tailwind.</p>
+          <div class="flex flex-wrap gap-4">
+            <a class="hover:text-slate-900 dark:hover:text-white" href="#top">Back to top</a>
+            <a class="hover:text-slate-900 dark:hover:text-white" href="https://github.com/your-username" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="hover:text-slate-900 dark:hover:text-white" href="https://www.linkedin.com/in/your-handle/" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script>
+      // ====== Dark mode (persisted) ======
+      const root = document.documentElement;
+      const themeToggle = document.getElementById("themeToggle");
+      const themeIcon = document.getElementById("themeIcon");
+
+      function setTheme(mode) {
+        if (mode === "dark") {
+          root.classList.add("dark");
+          localStorage.setItem("theme", "dark");
+          themeIcon.textContent = "☀";
+        } else {
+          root.classList.remove("dark");
+          localStorage.setItem("theme", "light");
+          themeIcon.textContent = "☾";
+        }
+      }
+
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) setTheme(savedTheme);
+      else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) setTheme("dark");
+
+      themeToggle.addEventListener("click", () => {
+        const isDark = root.classList.contains("dark");
+        setTheme(isDark ? "light" : "dark");
+      });
+
+      // ====== Mobile menu ======
+      const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      mobileMenuBtn.addEventListener("click", () => {
+        const isHidden = mobileMenu.classList.contains("hidden");
+        mobileMenu.classList.toggle("hidden");
+        mobileMenuBtn.setAttribute("aria-expanded", String(isHidden));
+      });
+
+      // Close mobile menu when clicking a link
+      mobileMenu.querySelectorAll("a").forEach((a) => {
+        a.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          mobileMenuBtn.setAttribute("aria-expanded", "false");
+        });
+      });
+
+      // ====== Project filter ======
+      const projectFilter = document.getElementById("projectFilter");
+      const projectCards = Array.from(document.querySelectorAll(".project-card"));
+
+      projectFilter.addEventListener("input", (e) => {
+        const q = e.target.value.trim().toLowerCase();
+        projectCards.forEach((card) => {
+          const text = card.innerText.toLowerCase();
+          const tags = (card.getAttribute("data-tags") || "").toLowerCase();
+          const match = !q || text.includes(q) || tags.includes(q);
+          card.style.display = match ? "" : "none";
+        });
+      });
+
+      // ====== Contact form (mailto) ======
+      function handleContactSubmit(event) {
+        event.preventDefault();
+        const form = event.target;
+        const name = form.name.value.trim();
+        const email = form.email.value.trim();
+        const message = form.message.value.trim();
+
+        const subject = encodeURIComponent(`Portfolio contact from ${name}`);
+        const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}\n`);
+        window.location.href = `mailto:you@email.com?subject=${subject}&body=${body}`;
+        return false;
+      }
+
+      // ====== Footer year ======
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
